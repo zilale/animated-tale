@@ -1,5 +1,3 @@
-# Python
-############
 __pycache__/
 *.pyc
 *.pyo
@@ -29,8 +27,6 @@ build/
 *.so
 *.ipynb_checkpoints
 
-# Virtual Environment (Common Names)
-############
 .env
 .flaskenv
 .venvs/
@@ -51,36 +47,20 @@ build/
 .DS_Store # macOS specific
 .vscode/ # VS Code specific
 
-# Jupyter Notebook (if applicable)
-.ipynb_checkpoints
-
-# Database files (if using SQLite for development)
 *.sqlite3
 *.db
 !db.sqlite3.example # Example for versioning a blank db file
 
-# OS generated files
-############
 .DS_Store
 .Trash-*
 ehthumbs.db
 Thumbs.db
 
-# Logs
-############
 *.log
 
-# Uploaded files / Media (if applicable, often for user uploads)
-# media/
-# staticfiles_build/
-
-# Testing
-############
 .coverage.*
 .hypothesis/
 
-# Build artifacts
-############
 celerybeat.pid
 celeryd.pid
 *.dump
