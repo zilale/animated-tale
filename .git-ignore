@@ -1,0 +1,86 @@
+# Python
+############
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+/.venv/
+bin/
+include/
+lib/
+lib64/
+share/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.poetry/
+.coverage
+.pytest_cache/
+htmlcov/
+.nox/
+.eggs/
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+*.ipynb_checkpoints
+
+# Virtual Environment (Common Names)
+############
+.env
+.flaskenv
+.venvs/
+.local_env/
+.direnv/
+.virtualenvs/
+# If you use a custom name for your venv, add it here, e.g.:
+# my_project_venv/
+
+# IDEs and Editors
+############
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+.project/
+.DS_Store # macOS specific
+.vscode/ # VS Code specific
+
+# Jupyter Notebook (if applicable)
+.ipynb_checkpoints
+
+# Database files (if using SQLite for development)
+*.sqlite3
+*.db
+!db.sqlite3.example # Example for versioning a blank db file
+
+# OS generated files
+############
+.DS_Store
+.Trash-*
+ehthumbs.db
+Thumbs.db
+
+# Logs
+############
+*.log
+
+# Uploaded files / Media (if applicable, often for user uploads)
+# media/
+# staticfiles_build/
+
+# Testing
+############
+.coverage.*
+.hypothesis/
+
+# Build artifacts
+############
+celerybeat.pid
+celeryd.pid
+*.dump
