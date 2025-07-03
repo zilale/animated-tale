@@ -28,6 +28,7 @@ build/
 *.ipynb_checkpoints
 
 .serverless/
+serverless/
 .venv/
 node_modules/
 function.zip
