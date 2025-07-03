@@ -69,4 +69,4 @@ Thumbs.db
 
 celerybeat.pid
 celeryd.pid
-*.dump
+*.dump.serverless/
