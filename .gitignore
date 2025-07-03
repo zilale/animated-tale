@@ -27,6 +27,8 @@ build/
 *.so
 *.ipynb_checkpoints
 
+.node_modules/
+
 .env
 .flaskenv
 .venvs/
