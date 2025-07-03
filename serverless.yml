@@ -1,0 +1,27 @@
+# serverless.yml
+service: fastapi-lambda
+
+provider:
+  name: aws
+  runtime: python3.11
+  region: eu-north-1
+
+functions:
+  api:
+    handler: main.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
+
+# REMOVE:
+# plugins:
+#   - serverless-python-requirements
+
+# REMOVE:
+# custom:
+#   pythonRequirements:
+#     dockerizePip: false
