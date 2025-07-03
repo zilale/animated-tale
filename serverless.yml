@@ -2,7 +2,7 @@ service: fastapi-lambda
 
 provider:
   name: aws
-  runtime: python3.12
+  runtime: python3.11
   region: eu-north-1
 
 package:
