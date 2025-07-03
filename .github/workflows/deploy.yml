@@ -16,25 +16,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.11'
 
-      - name: Install Python dependencies into build folder
+      - name: Install Python dependencies and build zip
         run: |
           mkdir -p build
           pip install --target build -r requirements.txt
           cp main.py build/
-
-      - name: Create deployment package
-        run: |
           cd build
           zip -r ../function.zip .
+          cd ..
+          rm -rf build
 
       - name: Set up Node.js for Serverless
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install Serverless CLI (v3 – no login required)
+      - name: Install Serverless CLI (v3 - no login required)
         run: npm install -g serverless@3
 
       - name: Configure AWS credentials
@@ -48,5 +47,4 @@ jobs:
         run: serverless deploy
 
       - name: Print endpoint
-        run: |
-          serverless info
+        run: serverless info

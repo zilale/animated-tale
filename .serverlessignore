@@ -2,9 +2,9 @@
 node_modules
 __pycache__
 .git
-.gitignore
-.DS_Store
-tests
-*.log
-*.zip
-.env
+...
+# .serverlessignore
+
+# Ignore everything except the deployment package
+*
+!function.zip
