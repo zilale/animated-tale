@@ -6,7 +6,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 middleware = [
     Middleware(
-        # type: ignore
         CORSMiddleware,
         allow_origins=["*"],
         allow_credentials=True,
@@ -18,14 +17,20 @@ middleware = [
 app = FastAPI(middleware=middleware)
 handler = Mangum(app)
 
-
 class BookSurvey(BaseModel):
-    character: str
-    theme: str
+    num_children: int
+    children: list[dict]  # Each child will contain fields like name, age, gender, features
+    personality: list[str]
+    hobbies: list[str]
+    curiosities: list[str]
+    favorite_places: list[str]
+    family_mentions: list[str] = []
+    pets: list[dict] = []
+    virtues: list[str] = []
+    illustration_style: str = ""
     product_id: str
-
 
 @app.post("/survey")
 async def handle_survey(data: BookSurvey):
-    print("Received survey data:", data)
+    print("Received full survey data:", data)
     return {"status": "ok", "message": "Book customization received"}
