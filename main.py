@@ -5,6 +5,14 @@ from mangum import Mangum
 app = FastAPI()
 handler = Mangum(app)
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 class BookSurvey(BaseModel):
     character: str
     theme: str
