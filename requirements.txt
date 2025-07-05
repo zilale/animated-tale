@@ -1,8 +1,8 @@
 fastapi==0.115.1
+starlette==0.38.2
 mangum==0.19.0
 uvicorn==0.29.0
 pydantic==2.11.1
 requests==2.32.4
-starlette==0.40.0
 #pdfkit==1.0.0        Only if you're using pdfkit
 #weasyprint==65.1    # Only if you're using WeasyPrint for PDF styling
