@@ -1,7 +1,8 @@
-fastapi==0.115.14
-mangum==0.19.0         # ASGI adapter for AWS Lambda
-uvicorn==0.29.0        # Optional: only needed for local testing
-pydantic==2.11.7
+fastapi==0.115.1
+mangum==0.19.0
+uvicorn==0.29.0
+pydantic==2.11.1
 requests==2.32.4
-pdfkit==1.0.0          # Only if you're generating PDFs
-weasyprint==65.1       # Optional: keep if you're using it for PDF styling
+starlette==0.40.0
+#pdfkit==1.0.0        Only if you're using pdfkit
+#weasyprint==65.1    # Only if you're using WeasyPrint for PDF styling
